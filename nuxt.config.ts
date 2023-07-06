@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     },
   },
   plugins: [
-    { src: "@/plugins/vClickOutside", ssr: false }
+    { src: "@/plugins/click-outside", ssr: false }
   ],
 
 })
