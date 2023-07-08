@@ -2,7 +2,7 @@
   <div>
     <AuthHOC/>
     <section class="bg-gray-50">
-      <div class="flex flex-col gap-4 items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div class="flex flex-col gap-4 items-center justify-center px-6 py-8 mx-auto min-h-screen lg:py-0">
         <logo/>
         <div class="w-full bg-white rounded-lg shadow sm:max-w-md">
           <div class="p-6 md:space-y-6 sm:p-8">
@@ -87,7 +87,7 @@ export default {
       const {username, password} = data;
       if ((username === 'user' && password === 'user') || (username === 'admin' && password === 'admin')) {
         navigateTo('/dashboard');
-        Auth.login(username, push.success('Login successfully'))
+        Auth.login(username, () => push.success('Login successfully'))
       } else {
         error.value = true
       }

@@ -8,7 +8,7 @@
       <DeleteButton :id="item.id" :handleRefresh="handleRefresh"/>
     </div>
     <button v-if="item.redeemed"
-            class="bg-gray-300 text-gray-500 cursor-default w-full p-3 transition duration-300"
+            class="bg-[#4ca04c] text-white cursor-default w-full p-3 transition duration-300"
             v-text="'Already Redeemed'"/>
     <button v-else
             @click="redeemCoupon"
@@ -24,10 +24,11 @@
 <script>
 import DeleteButton from "./delete-coupon";
 import {usePush} from "notivue";
+import transitionComponent from "../transition-component"
 
 export default {
   name: 'coupon',
-  components: {DeleteButton},
+  components: {DeleteButton, transitionComponent},
   props: {
     item: {type: Object, required: true},
     handleRefresh: {type: Function, required: true}

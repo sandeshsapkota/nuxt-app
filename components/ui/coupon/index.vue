@@ -1,7 +1,7 @@
 <template>
   <div class="grid gap-10">
     <div class="flex justify-between items-center">
-      <h2 class="sm:text-2xl font-bold" v-text="'Your Coupons'"/>
+      <h2 class="sm:text-2xl font-bold text-[#444]" v-text="'Your Coupons'"/>
       <add-coupon :handleRefresh="refresh"/>
     </div>
     <div v-if="couponData?.statusCode === 200">

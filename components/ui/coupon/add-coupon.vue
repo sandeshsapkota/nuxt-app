@@ -1,51 +1,54 @@
 <template>
   <div class="relative add-coupon-dropdown-parent"
   >
-    <button class="bg-primary text-white py-2 px-5 rounded-full" @click="handleDropdown"> + Add a
+    <button class="bg-primary hover:bg-primary-600 transition duration-200 text-white py-2 px-5 rounded-full" @click="handleDropdown"> + Add a
       coupon
     </button>
-
-    <FormKit
-        type="form"
-        :config="{ preserveErrors: true }"
-        :actions="false"
-        @submit="postCoupon"
-        v-if="isDropdownOpen"
-    >
-      <!--  Title  -->
+    <transition-component>
       <FormKit
-          type="text"
-          label="Title"
-          name="title"
-          validation="required|length:4"
-          autocomplete="off"
-      />
-      <!--  Password Name -->
+          type="form"
+          :config="{ preserveErrors: true }"
+          :actions="false"
+          @submit="postCoupon"
+          v-if="isDropdownOpen"
+      >
+        <!--  Title  -->
+        <FormKit
+            type="text"
+            label="Title"
+            name="title"
+            validation="required|length:4"
+            autocomplete="off"
+        />
+        <!--  Password Name -->
 
-      <FormKit
-          type="number"
-          name="price"
-          label="Price"
-          validation="required|numeric"
-      />
+        <FormKit
+            type="number"
+            name="price"
+            label="Price"
+            validation="required|numeric"
+        />
 
-      <!--  Sign In Btn -->
-      <FormKit
-          class="add-coupon-submit-button"
-          type="submit"
-          label="Sign In">
+        <!--  Sign In Btn -->
+        <FormKit
+            class="add-coupon-submit-button"
+            type="submit"
+            label="Sign In">
+        </FormKit>
       </FormKit>
-  </FormKit>
+    </transition-component>
   </div>
 </template>
 
 <script>
 import {usePush} from "notivue";
+import transitionComponent from "../transition-component"
 
 export default {
   props: {
     handleRefresh: {type: Function, required: true}
   },
+  components: {transitionComponent,},
   setup(props) {
     const isDropdownOpen = ref(false);
     const push = usePush();

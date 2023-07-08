@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-8 justify-center items-center  empty-container">
+  <div class="flex flex-col justify-center items-center  empty-container">
     <svg width="551" height="568"  class="w-3/4 md:w-1/3"  viewBox="0 0 551 568" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_114_180)">
         <path d="M401.602 567.986H250.877C249.124 567.984 247.445 567.287 246.206 566.048C244.967 564.809 244.27 563.13 244.268 561.378V455.998C244.27 454.246 244.967 452.566 246.206 451.327C247.445 450.088 249.124 449.391 250.877 449.389H401.602C403.354 449.391 405.034 450.088 406.273 451.327C407.511 452.566 408.208 454.246 408.21 455.998V561.378C408.208 563.13 407.511 564.809 406.273 566.048C405.034 567.287 403.354 567.984 401.602 567.986Z" fill="#F2F2F2"/>
@@ -39,6 +39,6 @@
       </defs>
     </svg>
 
-    <p class="text-lg opacity-70 italic">Sorry ! We are having issue on the server ! </p>
+    <p class="text-lg opacity-60 italic">Sorry ! We are having issue on the server ! </p>
   </div>
 </template>

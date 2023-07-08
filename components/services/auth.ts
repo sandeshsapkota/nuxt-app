@@ -1,10 +1,8 @@
-import {AuthLoginParams} from "~/@types";
-
 class Auth {
-    login({username, callback}: AuthLoginParams) {
+    login(username:string,  callback: () => void) {
+        console.log(username)
         localStorage.setItem('login', 'true')
         localStorage.setItem('username', username)
-
         callback()
     }
 
