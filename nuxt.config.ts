@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
-  modules: [],
+  app: {
+    head: {
+      title: 'Coupon Wall',
+    }
+  },
+  modules: ['@formkit/nuxt'],
   css: ['~/assets/sass/app.scss','notivue/notifications.css', 'notivue/animations.css'],
   postcss: {
     plugins: {
@@ -8,7 +13,9 @@ export default defineNuxtConfig({
     },
   },
   plugins: [
-    { src: "@/plugins/click-outside", ssr: false }
+    { src: "@/plugins/click-outside", ssr: false },
   ],
-
 })
+export  {
+
+}

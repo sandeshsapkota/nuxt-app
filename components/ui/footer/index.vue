@@ -15,7 +15,7 @@
 }
 </style>
 <script>
-import Logo from "../logo/logo";
+import Logo from "../logo";
 export default {
   components: {Logo}
 }

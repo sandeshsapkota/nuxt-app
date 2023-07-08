@@ -7,23 +7,17 @@
   padding-right: 24px;
 }
 
-
 label{
   font-size: 14px;
   color: gray;
 }
 
-.form-control,.formkit-input{
+.form-control{
   background-color: var(--color-base-bg-100);
   display: block;
   padding: 6px 12px;
 }
 
-
 .card{
   box-shadow: 0 3px 22px 0 rgba(0, 0, 0, 0.1);
-}
-
-.formkit-form{
-  @apply absolute rounded-xl w-[320px] right-0 top-12 p-6 bg-white grid gap-5 card;
 }

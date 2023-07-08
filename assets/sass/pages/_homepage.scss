@@ -1,9 +1,11 @@
+.brand-logo svg {
+  width: 280px;
+}
+
 .empty-container{
   height: calc(100vh - 215px);
 }
 
-
 .add-coupon-dropdown{
-  width: min(calc(100vw - 48px), 500px);
-  z-index: 9999999;
+
 }

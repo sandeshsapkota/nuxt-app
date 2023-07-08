@@ -3,8 +3,8 @@
 @forward 'vendor/vendor';
 @forward "components/scrollbar";
 
-@forward 'base/utilities';
 @forward 'base/reset';
 @forward 'base/base';
+@forward 'base/components';
 
 @forward 'pages/homepage';
