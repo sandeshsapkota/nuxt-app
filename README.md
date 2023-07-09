@@ -43,7 +43,7 @@ npm run dev
 ```
 
 6.Open your browser and visit http://localhost:3000 to see your Nuxt.js application running.
-
+    
 ### Database Credentials
 The PostgreSQL database is configured with the following credentials:
 ```Username: postgres
