@@ -1,7 +1,6 @@
 import prisma from "~/server/prisma";
 
 class Coupon {
-
     async getItems() {
         try {
             return await prisma.coupon.findMany({

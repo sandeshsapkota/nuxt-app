@@ -1,9 +1,11 @@
 @forward 'abstract/variable';
-@forward "components/scrollbar";
 @forward 'vendor/vendor';
 
 @forward 'base/reset';
 @forward 'base/base';
-@forward 'base/components';
+
+@forward 'components/components';
+@forward 'components/form';
+@forward "components/scrollbar";
 
 @forward 'pages/homepage';

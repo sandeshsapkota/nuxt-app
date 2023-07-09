@@ -1,6 +1,5 @@
 class Auth {
     login(username:string,  callback: () => void) {
-        console.log(username)
         localStorage.setItem('login', 'true')
         localStorage.setItem('username', username)
         callback()
@@ -9,6 +8,9 @@ class Auth {
     logout( callback?: () => void) {
         localStorage.setItem('login', 'false')
         localStorage.setItem('username', '')
+        if(callback) {
+            callback();
+        }
     }
 }
 

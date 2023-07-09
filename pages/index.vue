@@ -13,7 +13,6 @@
                  v-text="'Credentials does not match . Please try again.'"/>
             <FormKit
                 type="form"
-                :config="{ preserveErrors: true }"
                 :actions="false"
                 @submit="handleSubmit"
             >

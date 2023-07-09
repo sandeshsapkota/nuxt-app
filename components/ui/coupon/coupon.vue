@@ -1,9 +1,8 @@
 <template>
   <div class="shadow bg-gray-200 p-8 rounded md grid gap-4 items-start">
     <div class="flex items-center gap-3 justify-between flex-wrap">
-      <div class="flex gap-1">
-        <h4 class="capitalize text-lg" v-text="item.title"/>
-        <span class="text-xs opacity-60 self-center mt-1" v-text="'Nrs. ' + item.cost"/>
+      <div>
+        <h4 class="capitalize text-lg">{{item.title}}<span class="text-xs opacity-60 self-center pl-1 mt-1" v-text="'Nrs. ' + item.cost"/></h4>
       </div>
       <DeleteButton v-if="isAdmin" :id="item.id" :handleRefresh="handleRefresh"/>
       <button class="w-8 h-8 flex items-center justify-center duration-200 rounded hover:bg-gray-300" v-if="isUser && item.redeemed" title="Copy discount code" @click="copyCode">

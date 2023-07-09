@@ -7,7 +7,6 @@
     <transition-component>
       <FormKit
           type="form"
-          :config="{ preserveErrors: true }"
           :actions="false"
           @submit="postCoupon"
           v-if="isDropdownOpen"
@@ -17,7 +16,7 @@
             type="text"
             label="Title"
             name="title"
-            validation="required|length:4"
+            validation="required|length:4,28"
             autocomplete="off"
         />
         <!--  Password Name -->
