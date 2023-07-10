@@ -11,5 +11,16 @@ services:
       - coupon-wallet_postgres-data:/var/lib/postgresql/data
     ports:
       - '5433:5432'
+  prisma:
+    image: prismagraphql/prisma:latest
+    restart: always
+    ports:
+      - '4466:4466'
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@db:5432/coupon_wallet
+    depends_on:
+      - db
+    volumes:
+      - ./prisma:/app/prisma
 volumes:
-  coupon-wallet_postgres-data:  # Add the volume declaration here
+  coupon-wallet_postgres-data:
