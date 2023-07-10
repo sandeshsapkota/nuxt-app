@@ -12,9 +12,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  plugins: [
-    { src: "@/plugins/click-outside", ssr: false },
-  ],
 })
 export  {
 
