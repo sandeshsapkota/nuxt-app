@@ -24,6 +24,5 @@ import Utils from "../../utils";
 let {data: couponData, pending, error, refresh} = await useFetch('/api/coupon', {
   transform: _couponData => _couponData
 });
-
 </script>
 
